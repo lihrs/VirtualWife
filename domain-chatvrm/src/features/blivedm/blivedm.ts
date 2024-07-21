@@ -1,6 +1,6 @@
 // 获取当前环境变量，假设为PRODUCT_ENV
 const environment = process.env.NODE_ENV;
-const port = process.env.PORT;
+const port = process.env.NEXT_PUBLIC_PORT;
 
 // 定义基础URL
 let baseUrl = "";
