@@ -6,7 +6,7 @@ let baseUrl = "";
 if (environment === "development") {
   baseUrl = ":8000";
 } else if (environment === "production") {
-  baseUrl = "/api/chatbot";
+  baseUrl = ":11333/api/chatbot";
 } else {
   throw new Error("未知环境变量");
 }
