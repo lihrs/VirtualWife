@@ -45,6 +45,8 @@ https://github.com/yakami129/VirtualWife/assets/36467094/51de1c07-f468-4987-8648
 
 ## 一、安装[Docker](https://www.docker.com/)环境
 
+#清理docker缓存
+docker system prune -a
 - 方式一：命令行方式安装
     - [docker安装手册](https://www.runoob.com/docker/macos-docker-install.html)
     - [docker-compose安装手册](https://www.runoob.com/docker/docker-compose.html)
