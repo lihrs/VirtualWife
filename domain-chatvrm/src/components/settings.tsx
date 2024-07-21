@@ -454,6 +454,15 @@ export const Settings = ({
                 <div className="section">
                     <div className="title">OpenAI配置</div>
                     <div className="field">
+                        <label>MODEL_NAME</label>
+                        <input type="text" defaultValue={formData.languageModelConfig.openai.MODEL_NAME}
+                               onChange={e => {
+                                   formData.languageModelConfig.openai.MODEL_NAME = e.target.value
+                                   setFormData(formData);
+                               }}
+                        />
+                    </div>
+                    <div className="field">
                         <label>OPENAI_API_KEY</label>
                         <input type="text" defaultValue={formData.languageModelConfig.openai.OPENAI_API_KEY}
                                onChange={e => {

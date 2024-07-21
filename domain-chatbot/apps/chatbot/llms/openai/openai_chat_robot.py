@@ -12,14 +12,15 @@ logger = logging.getLogger(__name__)
 
 
 class OpenAIGeneration:
-    model_name: str = "gpt-3.5-turbo"
     temperature: float = 0.7
+    model_name: str
     openai_api_key: str
     openai_base_url: str
 
     def __init__(self) -> None:
         from dotenv import load_dotenv
         load_dotenv()
+        self.model_name = os.environ['MODEL_NAME']
         self.openai_api_key = os.environ['OPENAI_API_KEY']
         self.openai_base_url = os.environ['OPENAI_BASE_URL']
 
@@ -33,12 +34,14 @@ class OpenAIGeneration:
                 messages=messages,
                 api_base=self.openai_base_url,
                 temperature=self.temperature,
+                custom_llm_provider="openai"
             )
         else:
             response = completion(
                 model=self.model_name,
                 messages=messages,
                 temperature=self.temperature,
+                custom_llm_provider="openai"
             )
         llm_result_text = response.choices[0].message.content if response.choices else ""
         return llm_result_text
@@ -68,6 +71,7 @@ class OpenAIGeneration:
                 api_base=self.openai_base_url,
                 stream=True,
                 temperature=self.temperature,
+                custom_llm_provider="openai"
             )
         else:
             response = completion(
@@ -75,6 +79,7 @@ class OpenAIGeneration:
                 messages=messages,
                 stream=True,
                 temperature=self.temperature,
+                custom_llm_provider="openai"
             )
 
         answer = ''

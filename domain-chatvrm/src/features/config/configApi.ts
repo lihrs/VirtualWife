@@ -13,6 +13,7 @@ export const initialFormData = {
     "socks5Proxy": "socks5://host.docker.internal:23457",
     "languageModelConfig": {
         "openai": {
+            "MODEL_NAME": "gpt-3.5-turbo",
             "OPENAI_API_KEY": "sk-",
             "OPENAI_BASE_URL": ""
         },

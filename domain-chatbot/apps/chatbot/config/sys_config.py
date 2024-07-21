@@ -120,6 +120,7 @@ class SysConfig:
         self.yourName = yourName
 
         # 加载大语言模型配置
+        os.environ['MODEL_NAME'] = sys_config_json["languageModelConfig"]["openai"]["MODEL_NAME"]
         os.environ['OPENAI_API_KEY'] = sys_config_json["languageModelConfig"]["openai"]["OPENAI_API_KEY"]
         os.environ['OPENAI_BASE_URL'] = sys_config_json["languageModelConfig"]["openai"]["OPENAI_BASE_URL"]
 
