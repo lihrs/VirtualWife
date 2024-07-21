@@ -1,12 +1,13 @@
 // 获取当前环境变量，假设为PRODUCT_ENV
 const environment = process.env.NODE_ENV;
+const port = process.env.PORT;
 
 // 定义基础URL
 let baseUrl = "";
 if (environment === "development") {
-  baseUrl = ":8000";
+  baseUrl = `:${port}`;
 } else if (environment === "production") {
-  baseUrl = "/api/chatbot";
+  baseUrl = port?`:${port}/api/chatbot`:`/api/chatbot`;
 } else {
   throw new Error("未知环境变量");
 }
