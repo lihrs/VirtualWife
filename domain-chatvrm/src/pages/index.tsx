@@ -359,12 +359,12 @@ export default function Home() {
                         {displayedSubtitle}
                     </div>
                 </div>
-                <MessageInputContainer
+                {/*<MessageInputContainer
                     isChatProcessing={chatProcessing}
                     onChatProcessStart={handleSendChat}
                     globalConfig={globalConfig}
-                />
-                <Menu
+                />*/}
+                {/*<Menu
                     globalConfig={globalConfig}
                     openAiKey={openAiKey}
                     systemPrompt={systemPrompt}
@@ -381,8 +381,7 @@ export default function Home() {
                     onChangeGlobalConfig={onChangeGlobalConfig}
                     handleClickResetChatLog={() => setChatLog([])}
                     handleClickResetSystemPrompt={() => setSystemPrompt(SYSTEM_PROMPT)}
-                />
-                <GitHubLink/>
+                />*/}
             </div>
         </div>
     )

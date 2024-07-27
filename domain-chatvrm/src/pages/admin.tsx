@@ -382,7 +382,6 @@ export default function Home() {
                     handleClickResetChatLog={() => setChatLog([])}
                     handleClickResetSystemPrompt={() => setSystemPrompt(SYSTEM_PROMPT)}
                 />
-                <GitHubLink/>
             </div>
         </div>
     )
