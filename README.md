@@ -45,8 +45,25 @@ https://github.com/yakami129/VirtualWife/assets/36467094/51de1c07-f468-4987-8648
 
 ## 一、安装[Docker](https://www.docker.com/)环境
 
+#先查看dokcer 
+docker ps -a
+#在停止docker
+docker stop id
 #清理docker缓存
 docker system prune -a
+
+#去到目录
+cd /home/VirtualWife
+执行更新 git pull
+
+#执行build
+sh build.sh
+
+#在运行
+docker run --name virtualwife-chatbot -d --restart always -p 8000:8000 -e TZ=Asia/Shanghai -v /home/VirtualWife/data:/data okapi0129/virtualwife-chatbot
+
+docker run --name virtualwife-chatvrm -d --restart always -p 11333:11333 -e TZ=Asia/Shanghai -v /home/VirtualWife/data:/data okapi0129/virtualwife-chatvrm
+
 - 方式一：命令行方式安装
     - [docker安装手册](https://www.runoob.com/docker/macos-docker-install.html)
     - [docker-compose安装手册](https://www.runoob.com/docker/docker-compose.html)
