@@ -12,7 +12,6 @@ import {connect} from "@/features/blivedm/blivedm";
 // import { M_PLUS_2, Montserrat } from "next/font/google";
 import {Introduction} from "@/components/introduction";
 import {Menu} from "@/components/menu";
-import {GitHubLink} from "@/components/githubLink";
 import {Meta} from "@/components/meta";
 import {GlobalConfig, getConfig, initialFormData} from "@/features/config/configApi";
 import {buildUrl} from "@/utils/buildUrl";
