@@ -60,9 +60,9 @@ cd /home/VirtualWife
 sh build.sh
 
 #在运行
-docker run --name virtualwife-chatbot -d --restart always -p 8000:8000 -e TZ=Asia/Shanghai -v /home/VirtualWife/data:/data okapi0129/virtualwife-chatbot
+cd installer/linux
 
-docker run --name virtualwife-chatvrm -d --restart always -p 11333:11333 -e TZ=Asia/Shanghai -v /home/VirtualWife/data:/data okapi0129/virtualwife-chatvrm
+sh start.sh
 
 - 方式一：命令行方式安装
     - [docker安装手册](https://www.runoob.com/docker/macos-docker-install.html)
